@@ -1,7 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { StyleSheet, Text, View, Platform, Keyboard } from 'react-native'
+import {
+  StyleSheet,
+  Text,
+  View,
+  Platform,
+  Keyboard,
+  Dimensions
+} from 'react-native'
 import {
   Container,
   Button,
@@ -23,6 +30,8 @@ import PopupDialog from 'react-native-popup-dialog'
 import TopBar from './component/TopBar'
 import ListShow from './component/ListShow'
 import { addTodo, delTodo, editTodo, changeStatusTodo } from '../../actions'
+
+const { width, height } = Dimensions.get('window')
 
 export class ToDoList extends React.Component {
   constructor(props) {
@@ -188,7 +197,7 @@ export class ToDoList extends React.Component {
           <PopupDialog
             dialogStyle={{ marginTop: -200 }}
             width={0.9}
-            height={Platform.OS === 'ios' ? 0.4 : 0.5}
+            height={Platform.OS === 'ios' ? height * 0.5 : height * 0.5}
             ref={popupDialog => {
               this.popupDialog = popupDialog
             }}
