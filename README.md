@@ -1,6 +1,6 @@
 # react-todo-list-app
 
-- clone git@github.com:infano2100/react-todo-list-app.git ( clone project )
+- clone https://github.com/infano2100/react-todo-list-app.git ( clone project )
 - cd react-todo-list-app
 - npm i (install package)
 - npm start (run project)
